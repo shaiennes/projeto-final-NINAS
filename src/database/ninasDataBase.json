@@ -1,0 +1,31 @@
+[
+    {
+        "nome": "SASKIA",
+        "categoria": "Música",
+        "Descricao": "Consciente, mulher, negra, brasileira, Saskia busca a evolução e compreensão de sua arte por parte de si mesma e do seu público em plena formação",
+        "local": "Rio Grande do Sul"
+        },
+        
+    {
+        "nome": "NARA COUTO",
+            "categoria": "Música",
+            "Descricao": "Intérprete do hit “Linda e Preta” que teve o clipe dirigido por Lázaro Ramos e Elísio Lopes Jr. As músicas de Nara misturam elementos do jazz às referências sonoras africanas e ao toque percussivo.",
+            "local": "Bahia"
+            },
+
+    {
+        "nome": "SARA KONDY",
+                "categoria": "Artes Cênicas",
+                "Descricao": "Baicharela em artes cênicas, já atuou em 15 peças, 8 filmes e co-produziu uma minisérie no Youtube, um ensaio sobre a obra Gota D'agua de Paulo Pontes e Chico Buarque.",
+                "local": "Rio de Janeiro"
+                }, 
+
+    {
+        "nome": "BLUE OLIVEIRA",
+                    "categoria": "Artes Cênicas",
+                    "Descricao": "Tem base de formação pelo Nós do Morro, Poeta de Rua, já atuou em 3 filmes e 4 peças e atualmente da aula para as crianças do Complexo PPG (comunidades do Pavão, Pavãozinho e Cantagalo).",
+                    "local": "Rio de Janeiro"
+                    }
+    
+]
+      
