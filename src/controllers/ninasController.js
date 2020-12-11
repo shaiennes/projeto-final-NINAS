@@ -22,17 +22,17 @@ const getNinas = (req,res)=>{
 
 //GET - buscar por categoria
 const getCategoriaNinas = (req, res) => {
-  ninasCollection.findOne({nome: req.params.categoria }, (error, categoria) => {
-    if (categoria) {
+  ninasCollection.find({categoria: req.params.categoria}, (error, ninas) => {
+    if (ninas) {
       return res.status(200).json({
-        mensagem: "Categoria encontrada",
+        mensagem: "Ninas encontradas",
         categoria
 
       })
 
     } else {
       return res.status(500).send({
-        mensagem: "Categoria não encontrado",
+        mensagem: "Ninas não encontradas",
         error
       })
     }
@@ -50,8 +50,10 @@ const addNinas = (req, res) => {
       return res.status(400).send(error)
     } else {
       return res.status(200).send({
-        mensagem: `${"Gratidão! Mais uma NINA cadstrada com sucesso"}`,
+        mensagem: "Gratidão! Mais uma NINA cadstrada com sucesso",
         cadastro
+
+
       })
     }
   })
@@ -60,7 +62,7 @@ const addNinas = (req, res) => {
 
 //atualizar cadastro
 const updateNinas = (req, res) => {
-  const idParam = req.query
+  const idParam = req.params.id
   const contatoBody = req.body
   const update = { new: true }
 
@@ -87,7 +89,7 @@ const updateNinas = (req, res) => {
 //DELETE - deleta uma NINA por id específico e traz mensagem 
 
 const deleteByIdNinas = (req, res) => {
-  const idParam = req.query
+  const idParam = req.params.id
   ninasCollection.findByIdAndDelete(idParam, (error, ninas) => {
     if (error) {
       return res.status(500).send({

@@ -15,7 +15,7 @@ const ninasSchema = new Schema({
         type: String,
         required: true
     },
-    Descricao: {
+    descricao: {
         type: String,
         required: true
     },
