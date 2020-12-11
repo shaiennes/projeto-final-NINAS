@@ -1,8 +1,9 @@
-const express = require('express');
-const app = express();
-const PORT = 8080;
+const app = require('./src/app');
 
-app.listen(PORT, () => {
-    console.log(`Servidos das NINAS está rodando no http://localhost:${PORT}`)
-})
+
+const port = process.env.PORT
+
+
+app.listen(port, () => console.log(`Servidor das NINAS está rodando no http://localhost:${port}`))
+
 module.exports = app;

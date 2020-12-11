@@ -9,5 +9,4 @@ router.put('/atualizar', ninasController.updateNinas)
 router.delete('deletar', ninasController.deleteByIdNinas)
 
 
-
 module.exports = router;
