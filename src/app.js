@@ -1,19 +1,20 @@
+require('dotenv').config()
+
 const express = require('express')
-const bodyParser = require('body-parser') 
-const mongoose = require('mongoose')
 const cors = require('cors')
+
 const app = express()
-const dotenv = require('dotenv')
+app.use(cors()) 
+
+const routesNinas = require('./routes/ninasRoute')
+const routesIndex = require('./routes/index')
+app.use(express.json())
 
 const db = require('./configs/database')
-
- const index = require("./routes/index")
- const ninas = require("./routes/ninasRoute")
-
 db.connect()
-app.use(cors()) 
-app.use(express.json())
-app.use('/', index)
 
+
+       app.use('/ninas', routesNinas)
+    app.use('/index', routesIndex)
 
 module.exports = app

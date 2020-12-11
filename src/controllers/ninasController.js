@@ -20,9 +20,9 @@ const getNinas = (req,res)=>{
 
 
 
-//GET get categoria das NINAS - buscar por categoria
+//GET - buscar por categoria
 const getCategoriaNinas = (req, res) => {
-  petsCollection.findOne({ nome: req.params.categoria }, (error, categoria) => {
+  ninasCollection.findOne({nome: req.params.categoria }, (error, categoria) => {
     if (categoria) {
       return res.status(200).json({
         mensagem: "Categoria encontrada",
